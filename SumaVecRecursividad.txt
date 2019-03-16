@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author pc
+ */
+public class SumaVectorial {
+
+    static Scanner entrada = new Scanner(System.in);
+
+    static int sumaRecursivaVectores(int[] vec1, int[] vec2, int n) {
+        if (n == 0) {
+            return vec1[n] + vec2[n];
+        } else {
+            return vec1[n] + vec2[n] + sumaRecursivaVectores(vec1, vec2, n - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        int n;
+
+        System.out.println("Favor ingresar el valor n: ");
+        n = entrada.nextInt();
+
+        int[] vec1 = new int[n];
+        int[] vec2 = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            vec1[i] = (int) (Math.random() * 1001);
+            vec2[i] = (int) (Math.random() * 1001);
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.print(vec1[i] + "\t");
+        }
+        System.out.println();
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(vec2[i] + "\t");
+        }
+
+        System.out.println("La suma de los datos de los vectores es: " + sumaRecursivaVectores(vec1, vec2, n - 1));
+    }
+
+}
