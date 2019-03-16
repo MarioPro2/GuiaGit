@@ -1,0 +1,8 @@
+public class Procesamiento {
+    double sump;
+    double sumPotencia(double x, int y )
+    {
+        return sump= Math.pow(x,y)+ sump;
+    }
+    
+}
