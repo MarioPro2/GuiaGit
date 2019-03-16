@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Entrada extends Procesamiento{
+    int i=0;
+    Scanner entrada = new Scanner(System.in);
+    void ingreso()
+    {
+        if(i<10)
+        {
+            System.out.println("Por favor ingresar la base, ingrese un numero entero o decimal:");
+            double x= entrada.nextDouble();
+            System.out.println("Por favor ingresar el exponente, ingrese un numero entero");
+            int y= entrada.nextInt();
+            sumPotencia(x,y);
+            i++;
+            ingreso();
+        }
+        else
+            System.out.println("La suma de las potencias es:" + sump);      
+    }
+}
